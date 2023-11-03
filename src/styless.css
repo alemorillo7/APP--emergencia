@@ -1,0 +1,86 @@
+button {
+  margin: 2px;
+}
+
+
+body {
+background-color: rgb(255, 255, 255);
+  color: white ;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  height: 100vh;
+}
+
+.formulario {
+  flex: 1;
+  background-color: rgba(52, 112, 172, 0.5);
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.mapa {
+  height: 50%;
+  width: 50%;
+}
+
+.home-contenedor,
+.clientes-contenedor,
+.alertas-contenedor {
+  width: 100%;
+  height: 100%;
+}
+
+.alertas-contenedor {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-primary {
+  padding: 0px 50px ;
+  display: block;
+  margin: 15px auto;
+}
+
+.home-contenedor{
+  background-image: url("./Foto-proyecto-emergecia.jfif");
+  background-size: cover;
+  background-attachment: fixed;
+  position:absolute;
+  width: 100%;
+  top: 0px;
+  bottom: 0px;
+}
+.clientes-contenedor{
+  background-color: black;
+  color: white;
+}
+
+/* Media Query para pantallas más pequeñas, ajusta según sea necesario */
+@media (max-width: 768px) {
+  .mapa {
+      height: 100%;
+      width: 100%;
+  }
+
+  .formulario {
+      width: 50%;
+      height: 100%;
+  }
+
+  .clientes-contenedor {
+      background-color: rgb(2, 2, 2) !important; /* Cambia el color de fondo según sea necesario */
+      color: rgb(246, 235, 235);
+  }
+
+  .alertas-contenedor {
+      width: 100%;
+      height: 50%;
+  }
+}
+
