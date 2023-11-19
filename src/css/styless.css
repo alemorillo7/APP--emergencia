@@ -1,0 +1,166 @@
+button {
+  margin: 2px;
+}
+
+
+body {
+background-color: rgb(255, 255, 255);
+  color: white ;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  height: 100vh;
+}
+
+.formulario {
+  flex: 1;
+  background-color: rgba(52, 112, 172, 0.5);
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.mapa {
+  height: 50%;
+  width: 50%;
+}
+
+.home-contenedor,
+.clientes-contenedor,
+.alertas-contenedor {
+  width: 100%;
+  height: 100%;
+}
+
+.alertas-contenedor {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-primary {
+  padding: 0px 50px ;
+  display: block;
+  margin: 15px auto;
+}
+
+.home-contenedor{
+  background-image: url("./Foto-proyecto-emergecia.jfif");
+  background-size: cover;
+  background-attachment: fixed;
+  position:absolute;
+  width: 100%;
+  top: 0px;
+  bottom: 0px;
+}
+.clientes-contenedor{
+  background-color: rgb(250, 250, 250);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+/* Media Query para pantallas más pequeñas, ajusta según sea necesario */
+@media (max-width: 768px) {
+  .mapa {
+      height: 100%;
+      width: 100%;
+  }
+
+  .formulario {
+      width: 50%;
+      height: 100%;
+  }
+
+  .clientes-contenedor {
+      background-color: rgb(255, 255, 255) ; /* Cambia el color de fondo según sea necesario */
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+  }
+
+  .alertas-contenedor {
+      width: 100%;
+      height: 50%;
+  }
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+}
+
+.modal-content {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+  color: #333;
+}
+
+.modal-content p {
+  margin: 10px 0;
+  color: #333;
+}
+
+button {
+  
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.titulo-lista-clientes{
+  color: #333;
+}
+
+.alertas-nav{
+  color: antiquewhite;
+}
+
+.img-nav{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.grilla-alertas {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #130d0d;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.grilla-alertas table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.grilla-alertas th, .grilla-alertas td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.grilla-alertas th {
+  background-color: #130d0d;
+}
+

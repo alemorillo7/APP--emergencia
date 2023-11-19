@@ -1,22 +1,43 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { Component } from 'react';
+import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import '../css/react-leaflet.css';
+import { NavBar } from './NavBar';
 
+class MapView extends Component {
+  handleClick(e) {
+    this.setState({ currentLocation: e.latlng });
+  }
 
-const position = [51.505, -0.09];
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentLocation: { lat: -34.6037389, lng: -58.4515704 },
+      zoom: 12,
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  render() {
+    const { currentLocation, zoom } = this.state;
+    return (
+      <MapContainer center={currentLocation} zoom={zoom} onClick={this.handleClick} zoomControl={false}>
+        <TileLayer
+          url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+          attribution='© <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+        />
+        {/* Agrega el control de zoom manual */}
+        <ZoomControl position="topright" />
+      </MapContainer>
+    );
+  }
+}
 
 export const AlertasPantalla = () => {
   return (
-    <div className='alertas-contenedor'>
-         <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      <Marker position={position}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
-      </Marker>
-    </MapContainer>
-    </div>
-  )
-}
+    <>
+      <NavBar />
+      <MapView />
+    </>
+  );
+};

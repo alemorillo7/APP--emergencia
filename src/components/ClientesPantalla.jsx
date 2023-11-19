@@ -1,5 +1,6 @@
 import  { useState, useEffect } from "react";
 import { NavBar } from "./NavBar";
+
 export const ClientesPantalla = () => {
   const [users, setUsers] = useState([]);
   const [selectedUser, setSelectedUser] = useState(null);
@@ -8,6 +9,8 @@ export const ClientesPantalla = () => {
     try {
       const response = await fetch(
         "http://190.183.59.149/consatmobile/api/api.asp?q=clients"
+
+       //" http://190.183.59.149/consatmobile/api/api.asp?q=login&u=alejandro&p=alejandro"
       );
       const data = await response.json();
       setUsers(data);
@@ -33,8 +36,11 @@ export const ClientesPantalla = () => {
     <NavBar></NavBar>
     
     
-    <div className="clientes-contenedor">
-      <h2>Lista de Clientes</h2>
+    <div className="titulo-lista-clientes">
+    <h2>Lista de Clientes</h2>
+    </div>
+     
+      <div className="clientes-contenedor">
       <ul>
         {users.map((user) => (
           <li key={user.id} onClick={() => openModal(user)}>
@@ -45,7 +51,7 @@ export const ClientesPantalla = () => {
           </li>
         ))}
       </ul>
-
+      </div>
       {/* Modal */}
       {selectedUser && (
         <div className="modal">
@@ -54,11 +60,11 @@ export const ClientesPantalla = () => {
             <p>Email: {selectedUser.mail}</p>
             <p>Ciudad: {selectedUser.localidad}</p>
             <p>Telefono: {selectedUser.telefono}</p>
-            <button onClick={closeModal}>Cerrar</button>
+            <button className="btn btn-primary" onClick={closeModal}>Cerrar</button>
           </div>
         </div>
       )}
-    </div>
+    
     </>
   );
 };

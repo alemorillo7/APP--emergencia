@@ -1,8 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom"
-
-
 import { HomePantalla } from "./components/HomePantalla"
-import { AlertasPantalla } from "./components/AlertasPantalla"
+import { AlertasPantalla}  from "./components/AlertasPantalla"
 import { ClientesPantalla } from "./components/ClientesPantalla"
 import { UsuariosPantalla } from "./components/UsuariosPantalla"
 

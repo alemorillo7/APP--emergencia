@@ -1,0 +1,6 @@
+.leaflet-container {
+    position: absolute;
+    width: calc(100vw);
+    height: calc(100vh);
+    /* z-index: -1; */
+}
