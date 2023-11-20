@@ -62,7 +62,7 @@ background-color: rgb(255, 255, 255);
   cursor: pointer;
 }
 
-/* Media Query para pantallas más pequeñas, ajusta según sea necesario */
+/* Media Query para pantallas más pequeñas */
 @media (max-width: 768px) {
   .mapa {
       height: 100%;
@@ -85,7 +85,7 @@ background-color: rgb(255, 255, 255);
       height: 50%;
   }
 }
-
+/* -----------------ESTILOS PARA EL MODAL (CLIENTES PANTALLA)---------------- */
 .modal {
   display: flex;
   align-items: center;
@@ -139,7 +139,7 @@ button {
   height: 30px;
   border-radius: 50%;
 }
-
+/* -------------------ESTILOS PARA LA PANTALLA ALERTAS---------------- */
 .grilla-alertas {
   position: fixed;
   bottom: 0;
@@ -148,19 +148,100 @@ button {
   background-color: #130d0d;
   box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
   padding: 10px;
+  z-index: 1; /* Ajusta el z-index para que esté sobre el mapa */
 }
 
+.map-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+/* Ajustes para el botón "Mostrar Grilla" */
+button {
+  margin: 2px;
+  display: block;
+  
+}
+
+/* Ajustes para NavBar */
+.navBar-alertas {
+  z-index: 2;
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+  display: none;
+}
+
+/* Estilos para la grilla */
 .grilla-alertas table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.grilla-alertas th, .grilla-alertas td {
+.grilla-alertas th,
+.grilla-alertas td {
   padding: 8px;
   border: 1px solid #ddd;
 }
 
 .grilla-alertas th {
   background-color: #130d0d;
+  color: lightseagreen
 }
 
+/* ----------------ESTILOS PARA LA PANTALLA CLIENTES----------------- */
+
+
+
+.clientes-container {
+  display: flex;
+  height: 100vh;
+  position: relative; /* Añadido para establecer un contexto de apilamiento */
+}
+
+.mapa-clientes {
+  flex: 0.6; /* 60% de la pantalla */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.lista-clientes {
+  flex: 0.4; /* 40% de la pantalla */
+  overflow-y: auto; /* Agrega un scroll vertical si es necesario */
+  z-index: 1; /* Ajusta el z-index para que esté sobre el mapa */
+  background-color: #4d4c4c;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.navBar-clientes {
+  z-index: 2;
+}
+
+.titulo-lista-clientes{
+  color: #f2f2f2;
+}
+
+/* ----------------ESTILOS PARA USUARIOS PANTALLA---------------- */
+
+.usuarios-container {
+  display: flex;
+  height: 100vh;
+}
+
+.navBar-usuarios {
+  z-index: 2;
+}
+
+.mapa-usuarios {
+  z-index: 1;
+}

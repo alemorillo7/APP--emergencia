@@ -9,7 +9,7 @@ const history= useNavigate()
   const handleSalir= ()=>{
     localStorage.removeItem(`token`)
 // Navega a la ruta '/' utilizando la función history
-    history(`/`)
+    history(`/home`)
   }
 
   const [alertas, setalertas] = useState([])
@@ -53,7 +53,10 @@ const history= useNavigate()
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <NavLink to="/" className="nav-link" aria-current="page">HOME</NavLink>
+          <NavLink to="/home" className="nav-link" aria-current="page">HOME</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink to="/general" className="nav-link" aria-current="page"></NavLink>
         </li>
         <li className="nav-item">
           <NavLink to="/alertas" className="nav-link">ALERTAS</NavLink>
@@ -64,6 +67,7 @@ const history= useNavigate()
         <li className="nav-item">
           <NavLink to="/usuarios" className="nav-link" >USUARIOS</NavLink>
         </li>
+     
       </ul>
       <div className="alertas-nav">
        <button onClick={conteoAlertas} style={{backgroundColor:alertas.length > 0 ? "yellow" : "transparent",

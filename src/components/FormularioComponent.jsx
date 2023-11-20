@@ -16,7 +16,7 @@ const initialForm={
             event.preventDefault()
             console.log(formulario)
            // redirige la ventana actual a la ruta de alertas
-            window.location.href="/alertas"
+            window.location.href="/general"
         }
 
 

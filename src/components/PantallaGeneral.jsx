@@ -1,17 +1,10 @@
-import MapView from "./MapView";
-import { NavBar } from "./NavBar";
+import { NavBar } from "./NavBar"
+import MapView from "./MapView"
 
-
-
-export const UsuariosPantalla = () => {
-
-
-  
- 
-
+export const PantallaGeneral = () => {
   return (
     <>
-    <div className="usuarios-container">
+        <div className="usuarios-container">
     <div className="navBar-usuarios">
 
     <NavBar></NavBar>
@@ -20,6 +13,7 @@ export const UsuariosPantalla = () => {
     <MapView></MapView>
     </div>
     </div>
+    
     </>
-  );
-};
+  )
+}
