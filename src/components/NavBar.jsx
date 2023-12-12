@@ -9,7 +9,7 @@ const history= useNavigate()
   const handleSalir= ()=>{
     localStorage.removeItem(`token`)
 // Navega a la ruta '/' utilizando la función history
-    history(`/home`)
+    history(`/APP--emergencia/`)
   }
 
   const [alertas, setalertas] = useState([])

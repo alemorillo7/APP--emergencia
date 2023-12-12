@@ -11,7 +11,7 @@ export const App = () => {
     <>
       
       
-      <Routes basename="/APP--emergencia">
+      <Routes >
         <Route path="/home" element={<HomePantalla></HomePantalla>}></Route>
         <Route path="/general" element={<PantallaGeneral></PantallaGeneral>}></Route>
         <Route path="/alertas" element={<AlertasPantalla></AlertasPantalla>}></Route>
