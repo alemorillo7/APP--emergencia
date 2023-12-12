@@ -4,6 +4,6 @@ import react from '@vitejs/plugin-react-swc'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/APP--emergencia/",
+  base: "https://alemorillo7.github.io/APP--emergencia",
   
 });
